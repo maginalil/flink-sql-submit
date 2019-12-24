@@ -19,12 +19,14 @@ Job has been submitted with JobID d01b04d7c8f8a90798d6400462718743
 
 
 按照上述步骤无法执行成功.需要修改的地方如下
+
 1.缺少mysql的建表语句.
 CREATE TABLE `pvuv_sink` (
   `pv` bigint(20) DEFAULT NULL,
   `uv` bigint(20) DEFAULT NULL,
   `dt` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 2.flink使用1.9.1(1.9.0应该也可以)
 
 3.下载好依赖包(全部从这个版本里下载). https://ci.apache.org/projects/flink/flink-docs-release-1.9/dev/table/connect.html   
